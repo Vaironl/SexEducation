@@ -4,11 +4,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:id="@+id/placeholderThree"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Three"
-        android:textSize="40dp" />
+        android:background="#ee054505"
+        android:visibility="visible" />
+
+    <WebView
+        android:layout_marginTop="100dp"
+        android:id="@+id/fragmentthreeWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
 </RelativeLayout>

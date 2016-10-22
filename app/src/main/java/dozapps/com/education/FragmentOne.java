@@ -6,24 +6,47 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * Created by vaironl on 10/21/16.
  */
 public class FragmentOne extends Fragment {
 
+    private WebView webView;
+    private ImageView placeholder;
+
     public FragmentOne() {
-
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_one, container, false);
+        View view = inflater.inflate(R.layout.fragment_one, container, false);
+
+        webView = (WebView) view.findViewById(R.id.fragmentoneWebView);
+        placeholder = (ImageView) view.findViewById(R.id.placeholderOne);
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://developer.android.com/training/basics/firstapp/starting-activity.html");
+
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                placeholder.setVisibility(View.GONE);
+                webView.setVisibility(View.VISIBLE);
+            }
+        });
+
+        return view;
     }
 }

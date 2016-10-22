@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <WebView
+        android:id="@+id/questionsWebView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="I still have questions"
-        android:textSize="72sp" />
+        android:layout_height="match_parent"></WebView>
 
 </LinearLayout>

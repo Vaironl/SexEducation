@@ -6,11 +6,17 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 /**
  * Created by vaironl on 10/21/16.
  */
 public class FragmentTwo extends Fragment {
+
+    private WebView webView;
+    private ImageView placeholder;
 
     public FragmentTwo() {
 
@@ -24,6 +30,28 @@ public class FragmentTwo extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_two, container, false);
+        View view =inflater.inflate(R.layout.fragment_two, container, false);
+
+        webView = (WebView) view.findViewById(R.id.fragmenttwoWebView);
+        placeholder = (ImageView) view.findViewById(R.id.placeholderTwo);
+
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("http://stackoverflow.com/questions/24271432/webview-opening-browser-even-with-override");
+        webView.setWebViewClient(new WebViewClient()
+        {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                placeholder.setVisibility(View.GONE);
+                webView.setVisibility(View.VISIBLE);
+            }
+        });
+
+        return view;
     }
 }
