@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="About"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/selection_textsize"
+        android:theme="@style/CustomButton" />
+
+    <Button
+        android:id="@+id/topicsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="Topics"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/selection_textsize"
+        android:theme="@style/CustomButton" />
+
+    <Button
+        android:id="@+id/faqButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="FAQ"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/selection_textsize"
+        android:theme="@style/CustomButton" />
+
+    <Button
+        android:id="@+id/whatElseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="What Else?"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/selection_textsize"
+        android:theme="@style/CustomButton" />
+
+    <Button
+        android:id="@+id/questionsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:text="I Still Have Questions"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/selection_textsize"
+        android:theme="@style/CustomButton" />
+
+</LinearLayout>
