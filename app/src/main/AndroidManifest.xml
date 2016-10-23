@@ -22,6 +22,12 @@
                 <category android:name="android.intent.category.MAINACTIVITY" />
             </intent-filter>
         </activity>
+        <activity android:name=".QuestionsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.QUESTIONS" />
+                <category android:name="android.intent.category.QUESTIONSACTIVITY" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

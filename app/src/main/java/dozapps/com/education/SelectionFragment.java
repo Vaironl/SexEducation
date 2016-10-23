@@ -81,13 +81,8 @@ public class SelectionFragment extends Fragment {
         questionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                QuestionsFragments fragment = new QuestionsFragments();
-                fragmentTransaction.addToBackStack("questions");
-                fragmentTransaction.hide(SelectionFragment.this);
-                fragmentTransaction.add(R.id.fragmentContainer, fragment);
-                fragmentTransaction.commit();
+                Intent questionsIntent = new Intent(v.getContext(), QuestionsActivity.class);
+                startActivity(questionsIntent);
 
             }
         });

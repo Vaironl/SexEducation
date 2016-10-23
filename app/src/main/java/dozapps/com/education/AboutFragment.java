@@ -24,11 +24,12 @@ public class AboutFragment extends Fragment {
         webView = (WebView) view.findViewById(R.id.aboutWebView);
         webView.getSettings().setJavaScriptEnabled(true);
 
-        webView.loadUrl("http://stackoverflow.com/questions/9589365/splash-screen-while-loading-a-url-in-a-webview-in-android-app");
+        webView.loadUrl("http://10.0.2.2:8888/healthapp/about.html");
         webView.setWebViewClient(new WebViewClient()
         {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                webView.loadUrl(url);
                 return true;
             }
         });

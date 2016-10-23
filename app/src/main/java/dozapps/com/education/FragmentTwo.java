@@ -36,7 +36,7 @@ public class FragmentTwo extends Fragment {
         placeholder = (ImageView) view.findViewById(R.id.placeholderTwo);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://stackoverflow.com/questions/24271432/webview-opening-browser-even-with-override");
+        webView.loadUrl("http://10.0.2.2:8888/healthapp/stds.html");
         webView.setWebViewClient(new WebViewClient()
         {
             @Override

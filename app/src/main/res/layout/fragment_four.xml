@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/placeholderThree"
+        android:id="@+id/placeholderFour"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
@@ -13,7 +13,7 @@
 
     <WebView
         android:layout_marginTop="100dp"
-        android:id="@+id/fragmentthreeWebView"
+        android:id="@+id/fragmentfourWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />

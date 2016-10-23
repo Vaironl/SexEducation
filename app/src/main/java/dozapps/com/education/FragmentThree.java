@@ -37,7 +37,7 @@ public class FragmentThree extends Fragment {
         placeholder = (ImageView) view.findViewById(R.id.placeholderThree);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://github.com/Vaironl/SexEducation");
+        webView.loadUrl("http://10.0.2.2:8888/healthapp/tipsandguidelines.html");
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
