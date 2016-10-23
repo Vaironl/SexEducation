@@ -31,7 +31,7 @@ public class FragmentOne extends Fragment {
         placeholder = (ImageView) view.findViewById(R.id.placeholderOne);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://10.0.2.2:8888/healthapp/birthcontrol.html");
+        webView.loadUrl("https://spreadingtheknowledge.github.io/birthcontrol.html");
 
         webView.setWebViewClient(new WebViewClient() {
             @Override

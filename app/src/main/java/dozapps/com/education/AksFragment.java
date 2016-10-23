@@ -59,6 +59,8 @@ public class AksFragment extends Fragment {
                     String question = questionEditText.getText().toString();
 
                     new PostOperation().execute(question);
+
+                    questionEditText.setText("");
                 }
             }
         });
@@ -73,8 +75,7 @@ public class AksFragment extends Fragment {
 
             final MediaType MEDIA_TYPE_MARKDOWN
                     = MediaType.parse("application/json; charset=utf-8");
-            String postBody = String.format("{`user`:`Anonymous`,`question`:`%s`}", question).replace("`", "\"");
-            Log.i("ASKFRAGMENT", "question: " + question);
+            String postBody = String.format("{`user`:`Anonymous`,`question`:`%s`, `answer`:``}", question).replace("`", "\"");
 
 
             Request request = new Request.Builder().url("http://blooming-woodland-41263.herokuapp.com/contacts")

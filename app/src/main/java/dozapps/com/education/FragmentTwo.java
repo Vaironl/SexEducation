@@ -36,7 +36,7 @@ public class FragmentTwo extends Fragment {
         placeholder = (ImageView) view.findViewById(R.id.placeholderTwo);
 
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://10.0.2.2:8888/healthapp/stds.html");
+        webView.loadUrl("https://spreadingtheknowledge.github.io/stds.html");
         webView.setWebViewClient(new WebViewClient()
         {
             @Override

@@ -30,10 +30,9 @@ public class QuestionsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questions_activity);
 
-        toolbar = (Toolbar) findViewById(R.id.qToolbar);
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        toolbar = (Toolbar) findViewById(R.id.qToolbar);
+//        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewPager = (ViewPager) findViewById(R.id.qViewpager);
         setupViewPager(viewPager);

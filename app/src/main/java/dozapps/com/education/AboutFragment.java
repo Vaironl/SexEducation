@@ -24,7 +24,7 @@ public class AboutFragment extends Fragment {
         webView = (WebView) view.findViewById(R.id.aboutWebView);
         webView.getSettings().setJavaScriptEnabled(true);
 
-        webView.loadUrl("http://10.0.2.2:8888/healthapp/about.html");
+        webView.loadUrl("https://spreadingtheknowledge.github.io/about.html");
         webView.setWebViewClient(new WebViewClient()
         {
             @Override

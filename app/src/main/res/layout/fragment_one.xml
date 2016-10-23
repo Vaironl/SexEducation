@@ -13,7 +13,7 @@
 
     <WebView
         android:id="@+id/fragmentoneWebView"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></WebView>
 

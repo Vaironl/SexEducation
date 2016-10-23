@@ -27,7 +27,7 @@ public class SelectionFragment extends Fragment {
         aboutButton = (Button) view.findViewById(R.id.aboutButton);
         topicButton = (Button) view.findViewById(R.id.topicsButton);
         FAQButton = (Button) view.findViewById(R.id.faqButton);
-        whatElseButton = (Button) view.findViewById(R.id.whatElseButton);
+//        whatElseButton = (Button) view.findViewById(R.id.whatElseButton);
         questionsButton = (Button) view.findViewById(R.id.questionsButton);
 
         aboutButton.setOnClickListener(new View.OnClickListener() {
@@ -64,19 +64,19 @@ public class SelectionFragment extends Fragment {
             }
         });
 
-        whatElseButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                ElseFragment fragment = new ElseFragment();
-                fragmentTransaction.addToBackStack("else");
-                fragmentTransaction.hide(SelectionFragment.this);
-                fragmentTransaction.add(R.id.fragmentContainer, fragment);
-                fragmentTransaction.commit();
-
-            }
-        });
+//        whatElseButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                ElseFragment fragment = new ElseFragment();
+//                fragmentTransaction.addToBackStack("else");
+//                fragmentTransaction.hide(SelectionFragment.this);
+//                fragmentTransaction.add(R.id.fragmentContainer, fragment);
+//                fragmentTransaction.commit();
+//
+//            }
+//        });
 
         questionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
